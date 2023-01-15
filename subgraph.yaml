@@ -1,0 +1,26 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: HelloTheGraph
+    network: mainnet
+    source:
+      address: "0xc4eAa5fa9d5e950FCC0bdaA3aD73F375bb5CC864"
+      abi: HelloTheGraph
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - CounterAugmented
+        - SetHelloCalled
+      abis:
+        - name: HelloTheGraph
+          file: ./abis/HelloTheGraph.json
+      eventHandlers:
+        - event: CounterAugmented(uint256)
+          handler: handleCounterAugmented
+        - event: SetHelloCalled(string,address)
+          handler: handleSetHelloCalled
+      file: ./src/hello-the-graph.ts

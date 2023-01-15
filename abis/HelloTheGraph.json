@@ -1,0 +1,64 @@
+[
+  {
+    "inputs": [],
+    "name": "augmentCounter",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "counterValue",
+        "type": "uint256"
+      }
+    ],
+    "name": "CounterAugmented",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      { "internalType": "string", "name": "message", "type": "string" }
+    ],
+    "name": "setHello",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "message",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "SetHelloCalled",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "counter",
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "hello",
+    "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
